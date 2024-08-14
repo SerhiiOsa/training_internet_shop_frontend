@@ -22,7 +22,7 @@ const ProductItem = observer(({ product }) => {
     >
       <Image src={process.env.REACT_APP_API_URL + product.img} width={150} height={150} />
       <Rating rating={product.rating} productId={product.id} size={1.2}/>
-      <div>{productType ? productType.name.slice(0, -1) : 'Unknown Type'}</div>
+      <div>{productType ? productType.name : 'Unknown Type'}</div>
       <div>{productBrand ? productBrand.name : 'Unknown Brand'}</div>
       <div>{product.name}</div>
     </Card>

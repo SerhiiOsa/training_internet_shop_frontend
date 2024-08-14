@@ -44,12 +44,12 @@ const TypeBar = observer(() => {
         type.types.map(t => 
           <ListGroup.Item
             variant='dark'
-            active={t.id === type.selectedType.id}
+            active={type.selectedType && t.id === type.selectedType.id}
             onClick={() => handleSelect(t)}
             key={t.id}
             style={{cursor: "pointer"}}
           >
-            {t.name}
+            {t.nameInPlural}
           </ListGroup.Item>
         )
       }

@@ -14,6 +14,10 @@ export default class BasketStore {
     this._products = [...this._products, product];
   }
 
+  updateProductQuantity(productId, quantity) {
+    this._products.find(p => p.id === productId).quantity = quantity;
+  }
+
   removeProduct(productId) {
     const productIndex = this._products.findIndex(p => p.id === productId);
     if(productId !== -1) {
